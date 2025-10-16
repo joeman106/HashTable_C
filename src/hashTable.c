@@ -1,5 +1,4 @@
 #include "hashTable.h"
-#include "crc64.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -52,11 +51,13 @@ void insert_node_data(HashTable** pht, void* key){
             }
             curr = curr -> next;
         }
-        /*
-            If no node on the list has the same key, create a new frequency variable that is 1 (since this is the first occurance),
-            then create a new node and make it's next ptr point to the correct index of the array. Then I simply store it in the
-            array. Increment collisions.
-        */
+
+    /*
+        If no node on the list has the same key, create a new frequency variable that is 1 (since this is the first occurance),
+        then create a new node and make it's next ptr point to the correct index of the array. Then I simply store it in the
+        array. Increment collisions.
+    */
+   
         size_t freq = 1;
         node_at_idx = create_node(key, freq);
         node_at_idx -> next = ht -> buckets[idx];

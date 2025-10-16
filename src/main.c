@@ -125,13 +125,6 @@ int main(int argc, char* argv[]){
 
     size_t pairs_to_print = display_count > 0 ? display_count : (size_t) pairs;
 
-    /* If you see this still commented out I forgot to remove it, prints word pairs to stdout.
-    for(size_t i = 0; i < pairs_to_print; i++){
-        char* pair = pairs_with_counts[i].key;
-        int occ = (int) pairs_with_counts[i].freq;
-        printf("%10d %s\n", occ, pair);
-    }
-    */
 
     FILE *fOut = fopen("output.txt", "w");
     if(!fOut){
