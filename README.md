@@ -10,6 +10,8 @@ every word pair and frequency. Multiple .txt files can be passed as arguments at
 and print to the output file at the end.
 
 The crc64 hash is included in the helperfunctions file. To use a different hashing function, the makeFile must be modified accordingly.
+Several example .txt files are also included.
 
 
 To compile the program, use make run ARGS= <count> file1.txt <file2.txt> <file3.txt> ...
+Clean with make clean
